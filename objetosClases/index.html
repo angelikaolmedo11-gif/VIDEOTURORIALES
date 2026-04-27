@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Alumno {
+            constructor(nom,ape,edad,call,num,pobl){
+                this.nombre = nom;
+                this.apellidos = ape;
+                this.edad = edad;
+                this.domicilio = {calle:call,numero:num,poblacion:pobl};
+            }
+            saludar(){
+                alert(" Hola me llamo" + this.nombre + " " + this.apellidos + " Mi pueblo es " + this.domicilio.poblacion )
+            }
+        }
+
+        let angy = new Alumno ( "Angy","Olmedo", 27); 
+        let cris = new Alumno ( "Cris","sanchez", 25);
+           angy.saludar(); 
+           cris.saludar();
+
+        let alumno1 = {
+            nombre: " Angélica",
+            apellidos: "Olmedo",
+            edad:27,
+            domicilio: {
+                calle: "Norte",
+                numero: "11",
+                poblacion: "Alcázar"
+            },
+            saludar: function(){
+                alert("Hola me llamo " + this.nombre)
+            }
+    }
+        let alumno2 = {
+            nombre: " Nuria",
+            apellidos: "Martin",
+            edad:28,
+            domicilio: {
+                calle: "Don victor",
+                numero: "15",
+                poblacion: "Tomelloso"
+        },
+            saludar: function(){
+                alert("Hola me llamo " + this.nombre)
+            }
+    }
+
+        alumno1.saludar();
+        alumno2.saludar();
+
+        console.log(alumno1.domicilio.poblacion);
+        console.log(alumno2.nombre + " " + alumno2.apellidos)
+    </script>
+</body>
+</html>

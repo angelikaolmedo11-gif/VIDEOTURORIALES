@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div id="display">
+
+    </div>
+    <script>
+        let cursos=["4eso","1eso","3eso","2eso"];
+        /*cursos.push("1smsr");
+        cursos.pop();
+        cursos.unshift("1bach");
+        cursos.reverse();*/
+        cursos.splice(2,1);
+        cursos = cursos.map(c => c +"Bosco");
+        alert(cursos.indexOf("1eso"));
+        for ( let curso of cursos){
+           document.getElementById("display").innerHTML += "<br>" + curso;
+        }
+    </script>
+</body>
+</html>
